@@ -35,6 +35,14 @@ function Page() {
     const response = await axios.post("/api/blog", formData);
     if (response.data.success === true) {
       toast.success(response.data.msg);
+      setImage(false);
+      setData({
+        title: "",
+        description: "",
+        category: "Startup",
+        author: "Alex Bennet",
+        authorImage: "/profile_icon.png",
+      });
     } else {
       toast.error("Error");
     }
