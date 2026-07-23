@@ -1,3 +1,4 @@
+"use client";
 function page() {
   return <div>subscription</div>;
 }
